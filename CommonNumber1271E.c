@@ -7,3 +7,5 @@
  */
 
 #include "CommonNumber1271E.h"
+
+uint32_t commonNumber(uint32_t pathsNumber, )
