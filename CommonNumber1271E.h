@@ -1,5 +1,5 @@
 //
-// Created by HP-EliteBook on 12/19/2019.
+// Created by El Mehdi Benseddik on 12/19/2019.
 //
 
 #ifndef CODEFORCES_COMMONNUMBER1271E_H
