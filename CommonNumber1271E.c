@@ -9,9 +9,15 @@
 #include "CommonNumber1271E.h"
 
 uint32_t commonNumber(uint32_t pathsNumber, uint32_t k) {
-    uint32_t temporary = pathsNumber;
-    while (temporary != 1)
-        (temporary % 2 == 0) ? temporary /= 2 : temporary--;
+    uint32_t temp = pathsNumber, n = 0, tab[pathsNumber];
+    (temp % 2 == 0) ? (n = pathsNumber/2 + 1) : (n = pathsNumber/2 + 2);
+    uint32_t i = 0;
+    while (temp != 1) {
+        (temp % 2 == 0) ? temp /= 2 : temp--;
+        tab[temp]++;
+        i++;
+    }
+
 
     return 0;
 }
