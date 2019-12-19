@@ -24,15 +24,15 @@ uint32_t commonNumber(uint32_t pathsNumber, uint32_t k) {
         tab[i] = 0;
     }
     tab[1] = 1;
-    begin:
-    temp = pathsNumber;
-    while (temp != 1) {
-        (temp % 2 == 0) ? temp /= 2 : temp--;
-        tab[temp]++;
+    while (pathsNumber != 1) {
+        temp = pathsNumber;
+        while (temp != 1) {
+            (temp % 2 == 0) ? temp /= 2 : temp--;
+            tab[temp]++;
+        }
+        pathsNumber--;
     }
-    pathsNumber--;
-    if (pathsNumber == 1) return max(tab, length, k);
-    goto begin;
+    return max(tab, length, k);
 }
 
 
