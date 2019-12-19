@@ -8,17 +8,22 @@
 #include "CommonNumber1271E.h"
 
 uint32_t max(const uint32_t pInt[], uint32_t n, uint32_t idx) {
-    uint32_t max = pInt[0];
-    for (uint32_t i = 0; i < n; ++i) {
-        if (max < pInt[i])
+    uint32_t max = pInt[0], i = 0, r = 0;
+    for (i = 0; i < n; ++i) {
+        if (max < pInt[i]) {
             max = pInt[i];
+            r = i + 1;
+        }
     }
-    return max;
+    return r;
 }
 
 uint32_t commonNumber(uint32_t pathsNumber, uint32_t k) {
     uint32_t tab[pathsNumber], temp = 0, length = pathsNumber;
-    tab[pathsNumber] = 1;
+    for (uint32_t i = 0; i < length; ++i) {
+        tab[i] = 0;
+    }
+    tab[1] = 1;
     begin:
     temp = pathsNumber;
     while (temp != 1) {
