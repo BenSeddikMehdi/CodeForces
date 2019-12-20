@@ -21,6 +21,8 @@ uint32_t max(const uint32_t pInt[], uint32_t n, uint32_t idx) {
 }
 
 uint32_t commonNumber(uint32_t pathsNumber, uint32_t k) {
+    if (k == pathsNumber)
+        return 1;
     uint32_t length = pathsNumber+1, tab[length], temp = 0;
     for (uint32_t i = 0; i < length; ++i) {
         tab[i] = 0;
