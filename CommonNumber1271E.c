@@ -6,6 +6,7 @@
  */
 
 #include "CommonNumber1271E.h"
+
 uint32_t max(const uint32_t pInt[], uint32_t n, uint32_t idx) {
     uint32_t max = 0, i = 0, commonNumber = 0;
     for (i = 0; i < n; ++i) {
@@ -30,7 +31,7 @@ uint32_t commonNumber(uint32_t pathsNumber, uint32_t k) {
             (temp % 2 == 0) ? temp /= 2 : temp--;
             tab[temp]++;
         }
-        pathsNumber--;
+        (pathsNumber % 2 == 0) ? (pathsNumber = pathsNumber/2) : (pathsNumber = pathsNumber-1);
     }
     tab[temp]++;
     return max(tab, length, k);

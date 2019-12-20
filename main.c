@@ -3,7 +3,7 @@
 
 int main() {
     /* First argument of the CommonFunction must be >= of the second argument*/
-    uint32_t d = commonNumber(10000, 400);
-    printf("d = %d\n", d);
+    uint32_t result = commonNumber(11, 6);
+    printf("result = %d\n", result);
     return 0;
 }
